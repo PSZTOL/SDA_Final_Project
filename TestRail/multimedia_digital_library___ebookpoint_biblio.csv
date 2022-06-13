@@ -1,0 +1,74 @@
+﻿"ID","Title","Automation Type","Created By","Created On","Estimate","Expected Result","Forecast","Goals","Mission","Preconditions","Priority","References","Section","Section Depth","Section Description","Section Hierarchy","Steps","Steps","Steps (Additional Info)","Steps (Expected Result)","Steps (References)","Steps (Shared step ID)","Steps (Step)","Suite","Suite ID","Template","Type","Updated By","Updated On"
+"C1","Site login - happy path"," None","Jakub Cz","6/11/2022 10:55 AM","","User logged in successfully and is forwarded to https://biblio.ebookpoint.pl/biblioteka","","","","Any desktop computer with an installed Windows 7 (or above) and an internet browser (eg. Chrome/Opera/Edge). User has a valid preregistered account and is on the following site - https://biblio.ebookpoint.pl/logowanie.html","Medium","","Test Cases","0","","Test Cases","","1. Click on the ""adres e-mail"" form.
+2. Fill in valid preregistered e-mail.
+3. Click on ""hasło"" form.
+4. Fill in valid password for valid e-mail address from step 2.
+5. Press ""zaloguj się"" button.","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/11/2022 12:02 PM"
+"C2","Site login - invalid e-mail and password"," None","Jakub Cz","6/11/2022 11:01 AM","","User not logged in, error message appears ""Adres e-mail i/lub hasło jest nieprawidłowe.""","","","","Same as in [C1] - (Any desktop computer with an installed Windows 7 (or above) and an internet browser (eg. Chrome/Opera/Edge). User has a valid preregistered account and is on the following site - https://biblio.ebookpoint.pl/logowanie.html )","Medium","","Test Cases","0","","Test Cases","","1. Click on the ""adres e-mail"" form. 
+2. Fill in invalid e-mail (test@test.com)
+3. Click on ""hasło"" form. 
+4. Fill in between 1-5 random letters/digits. 
+5. Press ""zaloguj się"" button.","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/11/2022 12:04 PM"
+"C3","Site login - invalid password"," None","Jakub Cz","6/11/2022 11:06 AM","","User not logged in, error message appears ""Adres e-mail i/lub hasło jest nieprawidłowe.""","","","","Same as in [C1]","Medium","","Test Cases","0","","Test Cases","","1. Click on the ""adres e-mail"" form.
+2. Fill in valid preregistered e-mail.
+3. Click on ""hasło"" form.
+4. Fill in between 1-5 random letters/digits.
+5. Press ""zaloguj się"" button.","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/11/2022 12:04 PM"
+"C4","Borrowing an available book from ""NOWOŚCI - EBOOKI"" - fast way"," None","Jakub Cz","6/11/2022 11:41 AM","","The book is now borrowed and shows up in users ""TWOJA PÓŁKA"" section. The following message appears above the ""TWOJA PÓŁKA"" section: ""Pomyślnie dodano pozycję na Twoją półkę."". The message can be closed using the ""X"" button. ","","","","Any desktop computer with an installed Windows 7 (or above) and an internet browser (eg. Chrome/Opera/Edge). User is logged-in and is on the following site - https://biblio.ebookpoint.pl/biblioteka","Medium","","Test Cases","0","","Test Cases","","1. Using a mouse cursor the user scrolls through presented books on the ""NOWOŚCI - EBOOKI"" section highlighting (by moving the cursor on a book) a book of his choice until he finds a book with ""Pożycz"" button available.
+2. By using mouse cursor the user clicks on the ""Pożycz"" button of the highlighted book.","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/11/2022 12:02 PM"
+"C5","Borrowing an available book from ""NOWOŚCI - EBOOKI"" - extended way"," None","Jakub Cz","6/11/2022 11:43 AM","","The book is now borrowed. The ""Pożycz"" button has changed to ""Oddaj"" button.","","","","Same as in [C4].","Medium","","Test Cases","0","","Test Cases","","1. Using a mouse cursor the user scrolls through presented books on the ""NOWOŚCI - EBOOKI"" section highlighting (by moving the cursor on a book) a book of his choice until he finds a book with ""Pożycz"" button available. 
+2. By using mouse cursor the user clicks on the ""Szczegóły"" button of the highlighted book.
+3. User clicks on the ""Pożycz"" button.","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/11/2022 12:05 PM"
+"C6","Returning a borrowed book/audiobook/videocourse  - fast way"," None","Jakub Cz","6/11/2022 12:00 PM","","The book/audiobook/videocourse  is removed from the ""TWOJA PÓŁKA"" section. The following message appears above the ""TWOJA PÓŁKA"" section: ""Pomyślnie oddano pozycję na półkę."". The message can be closed using the ""X"" button. ","","","","Same as in [C4].","Medium","","Test Cases","0","","Test Cases","","1. User by using a mouse cursor highlights a book/audiobook/videocourse  present in his ""TWOJA PÓŁKA"" section.
+2. User clicks on the ""Oddaj"" button.","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/11/2022 2:05 PM"
+"C7","Returning a borrowed book/audiobook/videocourse  - extended way"," None","Jakub Cz","6/11/2022 1:14 PM","","The book/audiobook/videocourse  is now returned. The ""Oddaj"" button has changed to ""Pożycz"" button.","","","","Same as in [C4].","Medium","","Test Cases","0","","Test Cases","","1. User by using a mouse cursor highlights a book/audiobook/videocourse  present in his ""TWOJA PÓŁKA"" section.
+2. By using mouse cursor the user clicks on the ""Szczegóły"" button of the highlighted book/audiobook/videocourse.
+3. User clicks on the ""Oddaj"" button. ","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/11/2022 2:05 PM"
+"C8","Opinion and evaluation of a book/audiobook/videocourse - happy path"," None","Jakub Cz","6/11/2022 2:03 PM","","The review and rating is added. The fields from steps 3 to 5 disappear. Every user can see the rating and review of the book/audiobook/videocourse.","","","","Same as in [C4].","Medium","","Test Cases","0","","Test Cases","","1. User selects any one item from listed in one of the categories ""NOWOŚCI - EBOOKI"", ""NOWOŚCI - AUDIOBOOKI"" or ""NOWOŚCI - KURSY VIDEO"" available in the library and presses the ""Szczegóły"" button.
+2. User selects the ""OPINIE I OCENY"" tab.
+3. User selects one number from 1 to 6 in the ""Moja ocena"" section.
+4. User writes a review in the ""Recenzja"" field (eg. Bardzo dobra pozycja).
+5. User leaves the following fields empty - ""E-mail"", ""Zawód"", ""Imię i nazwisko"" and ""Miasto"".
+6. User ticks the checkbox next to the RODO agreement.
+7. User presses the ""Wyślij"" button.  ","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/12/2022 1:10 PM"
+"C16","Opinion and evaluation of a book/audiobook/videocourse - No number selected in ""Moja ocena"" section"," None","Jakub Cz","6/12/2022 2:35 PM","","The opinion is not sent. Following message appears under the ""Moja ocena"" field: ""Pole wymagane.""","","","","Same as in [C4].","Medium","","Test Cases","0","","Test Cases","","1. User selects any one item from listed in one of the categories ""NOWOŚCI - EBOOKI"", ""NOWOŚCI - AUDIOBOOKI"" or ""NOWOŚCI - KURSY VIDEO"" available in the library and presses the ""Szczegóły"" button.
+2. User selects the ""OPINIE I OCENY"" tab.
+3. User does not select any number in the ""Moja ocena"" section.
+4. User writes a review in the ""Recenzja"" field (eg. Bardzo dobra pozycja).
+5. User leaves the following fields empty - ""E-mail"", ""Zawód"", ""Imię i nazwisko"" and ""Miasto"".
+6. User ticks the checkbox next to the RODO agreement.
+7. User presses the ""Wyślij"" button.  ","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/12/2022 2:39 PM"
+"C9","Opinion and evaluation of a book/audiobook/videocourse - ""Recenzja"" field is empty"," None","Jakub Cz","6/12/2022 12:31 PM","","The opinion is not sent. Following message appears under the ""Recenzja"" field: ""Pole wymagane.""","","","","Any desktop computer with an installed Windows 7 (or above) and an internet browser (eg. Chrome/Opera/Edge). 
+User is logged-in and is on the ""OPINIE i OCENY"" tab of any ebook, audiobook or videocourse that he had NOT posted a review about.
+User has selected any number from 1 to 6 in the ""Moja ocena"" section.","Medium","","Test Cases","0","","Test Cases","","1. User leaves the ""Recenzja"" field empty. 
+2. User leaves the following fields empty - ""E-mail"", ""Zawód"", ""Imię i nazwisko"" and ""Miasto"". 
+3. User ticks the checkbox next to the RODO agreement. 
+4. User presses the ""Wyślij"" button.  ","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/12/2022 2:28 PM"
+"C15","Opinion and evaluation of a book/audiobook/videocourse - not allowed special characters in ""Recenzja"" field"," None","Jakub Cz","6/12/2022 1:12 PM","","The opinion is not sent. Following message appears under the ""Recenzja"" field: ""Pole zawiera niedozwolone znaki.""  ","","","","Same as in [C9].","Medium","","Test Cases","0","","Test Cases","","1. User fills in the ""Recenzja"" field with one or more not allowed special characters (eg.""@"", ""#"", ""$"", ""%"", ""^"", ""&"", ""*""). 
+2. User leaves the following fields empty - ""E-mail"", ""Zawód"", ""Imię i nazwisko"" and ""Miasto"". 
+3. User ticks the checkbox next to the RODO agreement. 
+4. User presses the ""Wyślij"" button.","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/12/2022 2:28 PM"
+"C11","Opinion and evaluation of a book/audiobook/videocourse - invalid e-mail construction"," None","Jakub Cz","6/12/2022 1:08 PM","","The opinion is not sent. Following message appears under the ""E-mail"" field: ""Nieprawidłowy adres e-mail.""  ","","","","Same as in [C9].","Medium","","Test Cases","0","","Test Cases","","1. User writes a review in the ""Recenzja"" field (eg. Bardzo dobra pozycja). 
+2. User fills in the field ""E-mail"" with improperly constructed e-mail adres (eg. test.test.pl)  
+3. User leaves the following fields empty - ""Zawód"", ""Imię i nazwisko"" and ""Miasto"".  
+4. User ticks the checkbox next to the RODO agreement.  
+5. User presses the ""Wyślij"" button.  ","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/12/2022 2:29 PM"
+"C12","Opinion and evaluation of a book/audiobook/videocourse - more then 100 characters in ""Zawód"" field"," None","Jakub Cz","6/12/2022 1:10 PM","","The opinion is not sent. Following message appears under the ""Zawód"" field: ""Pole może zawierać maks. 100 znaków.""  ","","","","Same as in [C9].","Medium","","Test Cases","0","","Test Cases","","1. User writes a review in the ""Recenzja"" field (eg. Bardzo dobra pozycja). 
+2. User fills in the field ""Zawód"" with more then 100 characters. 
+3. User leaves the following fields empty - ""E-mail"", ""Imię i nazwisko"" and ""Miasto"". 
+4. User ticks the checkbox next to the RODO agreement. 
+5. User presses the ""Wyślij"" button.  ","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/12/2022 2:30 PM"
+"C13","Opinion and evaluation of a book/audiobook/videocourse - more then 100 characters in ""Imię i Nazwisko"" field"," None","Jakub Cz","6/12/2022 1:11 PM","","The opinion is not sent. Following message appears under the ""Imię i Nazwisko"" field: ""Pole może zawierać maks. 100 znaków.""  ","","","","Same as in [C9].","Medium","","Test Cases","0","","Test Cases","","1. User writes a review in the ""Recenzja"" field (eg. Bardzo dobra pozycja).
+2. User fills in the field ""Imię i Nazwisko"" with more then 100 characters.
+3. User leaves the following fields empty - ""E-mail"", ""Zawód"" and ""Miasto"".
+4. User ticks the checkbox next to the RODO agreement.
+5. User presses the ""Wyślij"" button.  ","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/12/2022 2:31 PM"
+"C14","Opinion and evaluation of a book/audiobook/videocourse - more then 100 characters in ""Miasto"" field"," None","Jakub Cz","6/12/2022 1:11 PM","","The opinion is not sent. Following message appears under the ""Miasto"" field: ""Pole może zawierać maks. 100 znaków.""  ","","","","Same as in [C9].","Medium","","Test Cases","0","","Test Cases","","1. User writes a review in the ""Recenzja"" field (eg. Bardzo dobra pozycja).
+2. User fills in the field ""Miasto"" with more then 100 characters.
+3. User leaves the following fields empty - ""E-mail"", ""Zawód"" and ""Imię i nazwisko"".
+4. User ticks the checkbox next to the RODO agreement.
+5. User presses the ""Wyślij"" button.  ","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/12/2022 2:33 PM"
+"C10","Opinion and evaluation of a book/audiobook/videocourse - RODO agreement unchecked"," None","Jakub Cz","6/12/2022 12:46 PM","","The opinion is not sent. A message from the site appears ""Należy wyrazić zgodę"" in the top. User needs to dismiss the message with ""OK"" button and is not able to interact with the site until the message is dismissed. ","","","","Same as in [C9].","Medium","","Test Cases","0","","Test Cases","","1. User writes a review in the ""Recenzja"" field (eg. Bardzo dobra pozycja). 
+2. User leaves the following fields empty - ""E-mail"", ""Zawód"", ""Imię i nazwisko"" and ""Miasto"". 
+3. User unchecks the checkbox next to the RODO agreement. 
+4. User presses the ""Wyślij"" button.","","","","","","Master","S1","Test Case (Text)","Functional","Jakub Cz","6/12/2022 2:34 PM"

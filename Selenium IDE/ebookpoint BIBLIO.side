@@ -1,0 +1,97 @@
+{
+  "id": "3e6beea0-2940-4b26-a6a7-d929d5a63a87",
+  "version": "2.0",
+  "name": "ebookpoint BIBLIO",
+  "url": "https://biblio.ebookpoint.pl/logowanie.html",
+  "tests": [{
+    "id": "80e1b8b0-702b-4ef5-8d49-6cf0fcd07ab9",
+    "name": "C2-Site login - invalid e-mail and password",
+    "commands": [{
+      "id": "fe897bd7-0b8c-45df-a84e-4ec515f612b1",
+      "comment": "",
+      "command": "open",
+      "target": "https://biblio.ebookpoint.pl/logowanie.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecadc063-3e18-4742-834f-c42fd69b3827",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1050",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a00b706-61b7-4ff2-8cd4-37b150f0ca63",
+      "comment": "",
+      "command": "type",
+      "target": "id=signin_username",
+      "targets": [
+        ["id=signin_username", "id"],
+        ["name=signin[username]", "name"],
+        ["css=#signin_username", "css:finder"],
+        ["xpath=//input[@id='signin_username']", "xpath:attributes"],
+        ["xpath=//form[@id='slogin-form']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "test@test.com"
+    }, {
+      "id": "47236533-8bdd-4855-9fac-2816f4645134",
+      "comment": "",
+      "command": "type",
+      "target": "id=signin_password",
+      "targets": [
+        ["id=signin_password", "id"],
+        ["name=signin[password]", "name"],
+        ["css=#signin_password", "css:finder"],
+        ["xpath=//input[@id='signin_password']", "xpath:attributes"],
+        ["xpath=//form[@id='slogin-form']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "12sd4"
+    }, {
+      "id": "acf52d75-e5b1-48be-912f-d90600acca21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(6)",
+      "targets": [
+        ["css=.btn:nth-child(6)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='slogin-form']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'zaloguj się')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f0b470e-37b2-43ca-95a9-11cfe52a4ded",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.form__warning",
+      "targets": [],
+      "value": "VarText"
+    }, {
+      "id": "971002eb-2169-4f6a-9623-fe84eee5f740",
+      "comment": "",
+      "command": "echo",
+      "target": "${VarText}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eafeb732-6f77-4213-963d-d495b41d71f2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6e31f59b-6932-44ed-9f8d-67e70401d59b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["80e1b8b0-702b-4ef5-8d49-6cf0fcd07ab9"]
+  }],
+  "urls": ["https://biblio.ebookpoint.pl/logowanie.html"],
+  "plugins": []
+}
